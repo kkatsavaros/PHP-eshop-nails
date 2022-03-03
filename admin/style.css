@@ -1,0 +1,549 @@
+@charset "utf-8"
+/* CSS Document */
+/* sc27 - Administrator */
+/*----------------------------------------------
+				Page Layout 
+			   για δύο στήλες
+----------------------------------------------*/
+body{
+	/*font-size:92.5%;*/
+}
+
+
+#frame  /*All together*/
+	{
+	margin: 0;
+	border:1px dashed black;
+	}
+		
+#header	{
+	margin: 0px;
+	padding: 0px;
+	text-align:center;
+	background-color:#FFCCFF;		
+	border: 1px solid #333;
+	color:#000000;
+	height:100px;
+	/*border:1px dashed black;*/
+	}		
+		
+#columnLeft 
+	{
+	float: left;
+	width: 200px;
+	margin-left: 5px;
+	padding-top: 1em;
+	border:1px dashed black;
+	}
+		
+#columnLeft p 
+	{ 
+	margin-top: 0; 
+	}
+		
+#columnRight
+	{
+	padding-top: 1em;
+	margin: 0 2px 0 230px;   /* The width of Right column*/
+	padding-left:inherit;
+	margin-bottom:10px;
+	
+	border:1px dashed black;
+	}
+		
+#footer {
+	clear: both;
+	margin:0px;
+	padding:0px;
+	font-size:12px;
+	background-color:#FFCCFF;
+	border:1px solid #333;
+	height:25px;
+	
+	/*border:1px dashed black;*/
+	
+	}
+
+/*----------------------------------------------
+		Το κυρίως μενού αριστερά
+----------------------------------------------*/
+#navsite h5 
+	{
+	display: none;
+	}
+
+#navsite {
+	font-size: 0.7em;
+	font-weight: bold;
+	width: 205px;             /* The width of menu */
+	padding: 0 0 0 0; 
+	margin:0px 0px 0px 0px;	
+	font-family: Verdana, Helvetica, Arial, sans-serif; 
+	border:1px dashed black;
+}
+
+#navsite ul 
+	{
+	list-style: none;  /* Βγάζει τις κουκίδες */
+	margin: 0; 
+	padding: 0; 
+	}
+
+#navsite ul li 
+	{
+	margin: 0; 
+	}
+
+#navsite ul li a 
+	{
+	display: block; 
+	padding: 2px 2px 2px 0.5em; 
+	border-left: 10px solid #369; 
+	border-right: 1px solid #69c;
+	border-bottom: 1px solid #369;
+	background-color: #036; 
+	color: #fff; 
+	text-decoration: none; 
+	width: 100%; 
+	}
+
+html>body #navsite ul li a 
+	{ 
+	width: auto; 
+	} 
+
+#navsite ul li a:hover 
+	{
+	border-left: 10px solid #036;
+	border-right: 1px solid #69c;
+	border-bottom: 1px solid #369; 
+	background-color: #69f; 
+	color: #fff; 
+	}
+
+/*----------------------------------------------
+				Διάφορα
+----------------------------------------------*/
+a{text-decoration:none;}
+a:link,a:visited{color:#696A21;}
+a:hover,a:active{color:#692121;text-decoration:underline overline;}
+
+.center{
+	color:blue;
+	text-align:center;
+	font-size:20px;
+}
+
+h4,h2{	
+	text-align:center;
+	/*border:1px dashed black;*/
+	}
+
+#red_alert{
+	color:#FF0000;
+	font-size:18px;
+	font-weight:bold;
+	text-align:center;	
+	}
+
+#blue{
+	color:#0000FF;
+	font-size:18px;
+	font-weight:bold;
+	text-align:center;	
+	}
+
+#aboutheader{
+	padding: 10px 0px 10px 0px;
+	text-align:center;
+	
+	}
+
+/*----------------------------------------------
+				Πίνακες
+----------------------------------------------*/
+tr.hilite{background:#CCC;}     /* <tr class="<?php echo $i%2 ? 'nohilite' : 'hilite'; ?>"> */
+tr.nohilite{background:#edf5ff;}
+
+td.no_color{background:#FFF;}   /* Για τις εικόνες να μην αλλάζει το χρώμα πίσω τους - Products.show.php*/ 
+
+
+caption{                        /* Για όλα τα captions, όλων των πινάκων */
+	margin-top:5px;
+	margin-bottom:10px;
+	font-weight:bold;
+	color:#0000FF;
+	font-size:18px;	
+	background-color:#FFFFCC;
+}
+
+
+/*************** 1 */
+table.table_admin{
+	border-collapse:collapse;   /* Για να μην φαίνεται το εξωτερικό Border του πίνακα που είναι και πολύ παχύ */
+	width:800px;	
+	border:1px solid #666;      /* Μόνο το γύρω γύρω όλου του πίνακα και όχι των κελιών. */
+	text-align:center;
+}
+
+table.table_admin .main {            /* Η κάτω γραμμή από το μενού */
+	border-bottom:1px solid black; 
+}
+
+
+/*************** 2 */
+table.table_admin_insert{
+	border-collapse:collapse;   /* Για να μην φαίνεται το εξωτερικό Border του πίνακα που είναι και πολύ παχύ */
+	width:430px;	
+	border:1px solid #666;      /* Μόνο το γύρω γύρω όλου του πίνακα και όχι των κελιών. */
+	text-align:center;
+}
+
+table.table_admin_insert caption{
+	margin-top:30px;
+}
+
+
+/************* 3 */
+table.table_categories{
+	border-collapse:collapse;   /* Για να μην φαίνεται το εξωτερικό Border του πίνακα που είναι και πολύ παχύ */
+	width:500px;
+	text-align:center;	
+	border:1px solid #666;      /* Μόνο το γύρω γύρω όλου του πίνακα και όχι των κελιών. */
+}
+
+table.table_categories .main {            /* Η κάτω γραμμή από το μενού */
+	border-bottom:1px solid black;
+}
+
+table.table_categories tr:hover {
+  /* background-color:#3d80df;
+  color: #fff; */
+}
+
+
+col{
+	border-right:1px solid #666;	
+	}
+	
+col .abc4{
+	/* border:none; */
+	}	
+
+/************* 3b */
+table tr.table_inside{   /* Δεν δουλεύει γαμώτο */
+	border:3px solid #666;
+	color:red;
+}
+
+
+/************* 4 */
+table.table_categories_insert{
+	border-collapse:collapse;   /* Για να μην φαίνεται το εξωτερικό Border του πίνακα που είναι και πολύ παχύ */
+	
+	width:500px;	
+	text-align:center;	
+	border:1px solid #666;      /* Μόνο το γύρω γύρω όλου του πίνακα και όχι των κελιών. */	
+}
+
+table.table_categories_insert caption{  /* Μόνο για το caption αυτού του πίνακα */ 
+	margin-top:50px;
+}
+
+
+/************* 5 */
+table.table_subcategories_insert{
+	border-collapse:collapse;   /* Για να μην φαίνεται το εξωτερικό Border του πίνακα που είναι και πολύ παχύ */
+	
+	width:500px;	
+	text-align:center;	
+	border:1px solid #666;      /* Μόνο το γύρω γύρω όλου του πίνακα και όχι των κελιών. */	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/************* 6 */
+table.table_products_show{
+	border-collapse:collapse;   /* Για να μην φαίνεται το εξωτερικό Border του πίνακα που είναι και πολύ παχύ */
+	
+	width:1000px;	
+	text-align:left;	
+	border:1px solid #666;      /* Μόνο το γύρω γύρω όλου του πίνακα και όχι των κελιών. */
+}
+
+table.table_products_show tr:hover {
+  /* background-color:#3d80df;
+  color: #fff; */
+}
+
+
+/*************** 7 */
+table.table_products_insert{
+	border-collapse:collapse;   /* Για να μην φαίνεται το εξωτερικό Border του πίνακα που είναι και πολύ παχύ */
+	width:800px;	
+	border:1px solid #666;      /* Μόνο το γύρω γύρω όλου του πίνακα και όχι των κελιών. */	
+}
+
+
+
+table.table_products_insert th{
+	text-align:right;
+}
+
+table.table_products_insert td{
+	text-align:left;
+	border-bottom:1px dashed #666;
+	padding-left:10px;
+	
+}
+
+
+table.table_products_insert tr{
+	/*border-bottom:1px solid #666;	*/
+	
+}
+
+
+
+/*************  x */
+table.table1{
+	border-collapse:collapse;   /* Για να μην φαίνεται το εξωτερικό Border του πίνακα που είναι και πολύ παχύ */
+	width:500px;
+	text-align:center;	
+	border:1px solid #666;      /* Μόνο το γύρω γύρω όλου του πίνακα και όχι των κελιών. */
+}
+
+table.table1 .main {            /* Η κάτω γραμμή από το μενού */
+	border-bottom:1px solid black;  
+}
+
+table.table1 tr:hover {
+  background-color:#3d80df;
+  color: #fff;
+}
+
+col{
+	border-right:1px solid #666;	
+	}
+	
+col .abc4{
+	/* border:none; */
+	}	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**************/
+table.footer{
+	width:800px;
+}
+/**************/
+
+table.table_ProductsToHTML_queries_1o{
+	border-collapse:collapse;   /* Για να μην φαίνεται το εξωτερικό Border του πίνακα που είναι και πολύ παχύ */
+	
+	width:350px;	
+	text-align:center;	
+	border:1px solid #666;      /* Μόνο το γύρω γύρω όλου του πίνακα και όχι των κελιών. */
+}
+
+
+
+
+/****************/
+table.table_orders{
+	border-collapse:collapse;   /* Για να μην φαίνεται το εξωτερικό Border του πίνακα που είναι και πολύ παχύ */
+	width:1000px;
+	text-align:center;	
+	border:1px solid #666;      /* Μόνο το γύρω γύρω όλου του πίνακα και όχι των κελιών. */
+}
+
+table.table_orders th{
+	border-bottom:1px solid #666;
+}
+
+table.table_orders tr:hover {
+  background-color:#3d80df;  
+}
+
+/******************/
+
+table.table_between_dates{
+	border-collapse:collapse;   /* Για να μην φαίνεται το εξωτερικό Border του πίνακα που είναι και πολύ παχύ */
+	width:850px;
+	text-align:center;	
+	border:1px solid #666;      /* Μόνο το γύρω γύρω όλου του πίνακα και όχι των κελιών. */
+	
+	margin-bottom:20px;
+}
+
+
+/************* 11 : Πίνακας Πληροφοριών Διακομιστή */
+table.table_server_info{
+	border-collapse:collapse;   /* Για να μην φαίνεται το εξωτερικό Border του πίνακα που είναι και πολύ παχύ */
+	
+	width:950px;	
+	text-align:center;	
+	border:1px solid #666;      /* Μόνο το γύρω γύρω όλου του πίνακα και όχι των κελιών. */	
+}
+
+table.table_server_info caption{  /* Μόνο για το caption αυτού του πίνακα */ 
+	margin-top:50px;
+}
+
+table.table_server_info td{      /* Αριστερή στοίχιση των td */
+	text-align:left;
+	/*border-bottom:1px dashed #666;*/
+	padding-left:10px;
+	
+}
+
+table.table_server_info th{      /* Αριστερή στοίχιση των td */
+	text-align:left;
+	padding-left:5px;
+	width:180px;
+}
+
+
+
+/*----------------------------------------------
+		Για την επικεφαλίδα
+----------------------------------------------*/
+
+h1{
+	color:#FFCC00;
+	text-align:center;
+	}
+
+.periheader {
+	margin-left:100px;
+}
+
+.periheader h1{
+	
+	font-size:28px;	
+	color:#FF8000;
+	width:800px;
+	height:45px;
+	background: url(rounded_corners/top_and_bottom.jpg) no-repeat left top;
+	margin-top:-10px;
+	/*margin-left:50px;*/
+	/*border:1px dashed red;*/
+	}
+	
+/*----------------------------------------------
+				jQuery Tree
+----------------------------------------------*/
+#jQuery_Tree{
+	/*text-align:center;?*/	
+}
+
+/*----------------------------------------------
+				input text's
+----------------------------------------------*/
+select{
+	background:#fcc;
+}
+
+
+
+input[type="text"]{          /* Attribute selector */        
+	width:300px;             /* 'Ετσι ώστε όλα να έχουν το ίδιο πλάτος */
+	background:#fcc;
+	}
+
+	
+textarea {
+  width: 400px;
+  height: 100px;
+  background:#fcc;
+}
+/*-----*/
+input.index{
+	width:100px;             /* 'Ετσι ώστε όλα να έχουν το ίδιο πλάτος */
+	background:#fcc;
+}
+
+input:focus, textarea:focus, select:focus{   /*  Να μπαίνει πάντα στο τέλος όλων των inputs */
+	background:#ffc;
+	}
+
+
+/*--------------------------------------------------
+	Φοβερή Τεχνική Roll Over σε οποιαδήποτε εικόνα
+	
+	Για την εικόνα 1 κάτω από τον κυρίως μενού
+--------------------------------------------------*/
+
+.kmp1{            /*kmp: Κυρίως μενού picture 1 */
+	width: 30px; /* Δηλαδή όλη η εικόνα με τα κενά όπως έγινε στο photoshop */
+	height: 30px;
+	/*position: relative;*/
+	background:url(images/LogOut.jpg) no-repeat ;
+	
+	position:absolute;  /* Ακριβής τοποθεσία της εικόνας */
+	left:15px;
+	top:30px;
+	
+	/*border:solid 1px red;*/
+}
+
+.kmp1 ul {             /* reset */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.kmp1 a {
+  position: absolute;
+  left:0px;
+  top:0px;
+    
+  width: 30px;
+  height: 30px;
+  text-indent: -1000em;
+  /*border:1px solid #ff8000;*/
+}
+
+.kmp1 a:hover {	
+	border: 1px solid #f80;  
+  }
+
+
+*{
+	/* border:1px dashed black; */
+}
+</style>

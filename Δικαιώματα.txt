@@ -1,0 +1,16 @@
+Γενικά:
+GRANT SELECT,INSERT,UPDATE,DELETE ON nails.* TO administrator@localhost identified by 'password';
+
+------------------------------------------------------------------------------------------------------------
+για localhost
+GRANT SELECT,INSERT,UPDATE,DELETE ON pkotekav_nails.* TO pkotekav_admin@localhost identified by '123456';
+
+-------------------------------------------------------------------------------------------------------------
+για HappyByte
+
+db:    iyjsvkfs_pkotekav_nails
+admin: iyjsvkfs_pkotekav_nails_admin
+code admin : 10r/hmyt[-]
+
+
+GRANT SELECT,INSERT,UPDATE,DELETE ON iyjsvkfs_pkotekav_nails.* TO iyjsvkfs_pkotekav_nails_admin@localhost identified by '10r/hmyt[-]';

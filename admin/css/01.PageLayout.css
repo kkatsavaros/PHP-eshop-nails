@@ -1,0 +1,89 @@
+@charset "utf-8"
+/* CSS Document */
+
+<style type="text/css">
+
+/*----------------------------------------------
+				Page Layout
+----------------------------------------------*/
+body {
+	margin:0;
+	padding:0;
+	font-family:Georgia, Times, "Times New Roman", serif;	
+	color: #000;
+	width: 600px;
+	
+	
+	}
+		
+#frame  /*All together*/
+	{
+	margin: 0;
+	background-color: #fff;
+	
+	border:1px solid black;
+	}
+		
+#header {
+	margin:0px;
+	padding:0px;
+	height:70px;	          /* Το ύψος */
+	border-bottom: 1px solid #333;
+	background-color:#D8C8FA; /* Το χρώμα */
+	}
+		
+#header h1 {
+	margin: 0;
+	padding: 0;
+	color: white;
+	text-align:center;
+	color:#FF8000;
+	}
+		
+#columnLeft {
+	float: left;
+	width: 200px;
+	margin-left: 0px;
+	padding-top: 1em;	
+	
+	/*border:1px dashed red;*/
+	}
+		
+#columnLeft p { 
+	margin-top: 0; 		
+	}
+		
+#columnRight {
+	padding-top: 0em;
+	margin: 0 2px 5px 205px;   /* The width of Right column*/
+	padding-left:inherit;
+	
+	/*border:1px dashed red;*/
+	}
+
+#columnRight_orders_only {
+	padding-top: 0em;
+	margin: 0 2px 5px 5px;   /* The width of Right column*/
+	padding-left:inherit;
+	
+	/*border:1px dashed red;*/
+	}
+
+	
+#columnRight h2 { 
+	margin-top: 0;			
+	}		
+
+#footer {
+	margin:0px;
+	padding:0px;
+	clear: both;
+	background-color:#D8C8FA; /* Το χρώμα */
+	border-top:1px solid #333;
+	}
+
+ /* *{
+	border:1px dashed black;
+ }*/
+
+</style>

@@ -1,0 +1,89 @@
+@charset "utf-8"
+/* CSS Document */
+
+<style type="text/css">
+/*----------------------------------------------
+				Διάφορα
+----------------------------------------------*/
+
+p:first-letter{              
+	font-size:2.0em;
+	font-weight:bold;
+	font-style:italic;	
+	}
+	
+p.firstletter{
+	font-size:2.0em;
+	font-weight:bold;
+	font-style:italic;
+	}
+
+p.hidden{
+	color:#ccc;
+	}
+
+p.block{
+	color:#FF8000;
+	font-size:20px;
+	font-style:italic;
+	margin:150px 120px 50px 10px;
+	}
+	
+tr.sillogos1{
+	background-color:#999999
+	}
+
+#red{color:#FF0000;
+	font-weight:bold;}
+
+
+#Ionia h4{
+	color:#FF0000;
+	font-style:italic;
+	}		
+	
+.news {                      /* Το φτιάχνει όλο γκρι με γύρω γύρω */
+	margin:0px;
+	padding:0px;
+	background-color:#ccc;     
+	border:solid 1px black;
+	float:left;
+	}
+	
+.news img{
+	float:left;
+	}
+
+.news p{
+	float:right;
+	}
+	
+/*----------------------------------------------
+	Καρσί ήταν ίσαμε χθες η πατρίδα μας
+----------------------------------------------*/
+
+#karsi {
+	text-align:center;
+	font-size:18px;
+	font-family:"Courier New", Courier, mono;
+	font-style:italic;	      
+	margin:30px 30px 40px 30px;
+	}	
+
+#karsi a{
+	color:#FF8000;
+	text-decoration:none;	 		
+	}
+
+#karsi a:hover{
+	color:#ff0000;
+	}
+
+
+/*{
+	border:1px dashed black;
+}*/
+
+
+
+</style>

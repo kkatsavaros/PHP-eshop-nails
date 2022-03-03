@@ -1,0 +1,293 @@
+<?php
+session_start();
+	
+if (!isset($_SESSION['authenticated'])){	                      
+	header('Location: index.php');
+	exit();
+}
+
+include('repair_SQL_DATEONLY.php');
+
+if($_POST){
+print_r($_POST);
+}
+
+
+//----------------------------------------------------------------------
+//             Διαγραφή δεδομένων πινάκα  1. admin
+//----------------------------------------------------------------------		
+
+if($_POST['clear_table_admin']){
+	
+	//print_r($_POST);
+	
+		include ('db_main.php');
+		$sql= 'DELETE FROM admin';
+		$result= $db->query($sql);
+			
+		if ($result) {
+									
+			$alert1="Τα δεδομένα του πίνακα admin διαγράφηκαν.";					
+			
+		}
+		$db->close();
+}
+
+//----------------------------------------------------------------------
+//             Διαγραφή δεδομένων πινάκα  1. books
+//----------------------------------------------------------------------		
+
+if($_POST['clear_table_books']){
+	
+	//print_r($_POST);
+	
+		include ('db_main.php');
+		$sql= 'DELETE FROM books';
+		$result= $db->query($sql);
+			
+		if ($result) {
+									
+			$alert2="Τα δεδομένα του πίνακα books διαγράφηκαν.";					
+			
+		}
+		$db->close();
+}
+
+//----------------------------------------------------------------------
+//             Διαγραφή δεδομένων πινάκα  3. categories
+//----------------------------------------------------------------------		
+
+if($_POST['clear_table_categories']){
+	
+	//print_r($_POST);
+	
+		include ('db_main.php');
+		$sql= 'DELETE FROM categories';
+		$result= $db->query($sql);
+			
+		if ($result) {
+									
+			$alert3="Τα δεδομένα του πίνακα categories διαγράφηκαν.";					
+			
+		}
+		$db->close();
+}
+
+//----------------------------------------------------------------------
+//             Διαγραφή δεδομένων πινάκα  4. categories_sub1
+//----------------------------------------------------------------------		
+
+if($_POST['clear_table_categories']){
+	
+	//print_r($_POST);
+	
+		include ('db_main.php');
+		$sql= 'DELETE FROM categories_sub1';
+		$result= $db->query($sql);
+			
+		if ($result) {
+									
+			$alert4="Τα δεδομένα του πίνακα categories_sub1 διαγράφηκαν.";					
+			
+		}
+		$db->close();
+}
+
+
+
+
+//----------------------------------------------------------------------
+//            Διαγραφή δεδομένων πινάκων  5. customers
+//----------------------------------------------------------------------		
+
+if($_POST['clear_table_customers']){
+	
+	//print_r($_POST);
+	
+		include ('db_main.php');
+		$sql= 'DELETE FROM customers';
+		$result= $db->query($sql);
+			
+		if ($result) {
+									
+			$alert5="Τα δεδομένα του πίνακα customers διαγράφηκαν.";					
+			
+		}
+		$db->close();
+}
+
+
+//----------------------------------------------------------------------
+//             Διαγραφή δεδομένων πινάκων  6. orders
+//----------------------------------------------------------------------		
+
+if($_POST['clear_table_orders']){
+	
+	//print_r($_POST);
+	
+		include ('db_main.php');
+		$sql= 'DELETE FROM orders';
+		$result= $db->query($sql);
+			
+		if ($result) {
+									
+			$alert6="Τα δεδομένα του πίνακα orders διαγράφηκαν.";					
+			
+		}
+		$db->close();
+}
+
+
+//----------------------------------------------------------------------
+//             Διαγραφή δεδομένων πινάκων  7. order_items
+//----------------------------------------------------------------------		
+
+if($_POST['clear_table_orders']){
+	
+	//print_r($_POST);
+	
+		include ('db_main.php');
+		$sql= 'DELETE FROM order_items';
+		$result= $db->query($sql);
+			
+		if ($result) {
+									
+			$alert7="Τα δεδομένα του πίνακα order_items διαγράφηκαν.";					
+			
+		}
+		$db->close();
+}
+
+?>
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<!--link href="style.css" rel="stylesheet" type="text/css"/-->
+    
+    <link href="css/01.PageLayout.css"          rel="stylesheet" type="text/css"/>     
+    <link href="css/02.Menu.css"                rel="stylesheet" type="text/css"/> 
+    <link href="css/03.Standard.css"            rel="stylesheet" type="text/css"/> 
+    <link href="css/04.Tables.css"              rel="stylesheet" type="text/css"/>      
+    <link href="css/05.Input.css"               rel="stylesheet" type="text/css"/>  
+    <link href="css/06.RoundedBoxes.css"        rel="stylesheet" type="text/css"/>                 
+    <link href="css/07.DropShadowEffect.css"    rel="stylesheet" type="text/css"/> 
+    <link href="css/08.RollOverPicture.css"     rel="stylesheet" type="text/css"/> 
+    <link href="css/09.Topical.css"             rel="stylesheet" type="text/css"/> 
+    
+	<title><?php  include("title.php");?></title>
+	
+	<script type="text/javascript">
+		<!--
+		function SetAllCheckBoxes(FormName, FieldName, CheckValue)
+		{
+			if(!document.forms[FormName])
+				return;
+			var objCheckBoxes = document.forms[FormName].elements[FieldName];
+			if(!objCheckBoxes)
+				return;
+			var countCheckBoxes = objCheckBoxes.length;
+			if(!countCheckBoxes)
+				objCheckBoxes.checked = CheckValue;
+			else
+				// set the check value for all check boxes
+				for(var i = 0; i < countCheckBoxes; i++)
+					objCheckBoxes[i].checked = CheckValue;
+		}
+		// -->
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+<div id="frame">
+
+	<div id="header">
+		<?php
+			include("header.php");		
+		?>
+	</div>
+	
+	<div id="columnLeft">
+			<div id="navsite">		  
+				<?php
+					 include("Menu_Admin.php");	
+				?>
+			</div>
+	</div>
+
+
+	<div id="columnRight">
+			<h1>Καθαρισμός πινάκων</h1>
+	</div>
+	<?php
+			//----------------------------------------------------------------------
+			//                    Διαγραφή δεδομένων πινάκων
+			//----------------------------------------------------------------------			
+			?>
+						
+			<table class="table_clear_db" align="center">
+			<caption>Διαγραφή Πίνακα customers</caption>
+			
+			<form method="GET" name="myForm" onsubmit="return false;">
+			
+				<form name="myform" id="kati" method="post" action="<?php $_SERVER['PHP_SELF']; ?>">				
+				
+				<tr><th>Διαγραφή Πίνακα admin : </th><td><label for="myCheckbox1"> <input type="checkbox" name="myCheckbox" value="kati1"></td></tr>
+				
+				<tr><th>Διαγραφή Πίνακα books : </th><td><label for="myCheckbox2"><input type="checkbox" name="myCheckbox" value="kati2"></td></tr>
+				
+				<tr><th>Διαγραφή Πίνακα categories : </th><label for="myCheckbox3"><td><input type="checkbox" name="myCheckbox" value="kati3"></td></tr>
+				
+				<!-- tr><th>Διαγραφή Πίνακα categories_sub1 : </th><td><input type="checkbox" name="clear_table_categories_sub1" value="kati4"></td></tr>				
+				
+				<tr><th>Διαγραφή Πίνακα customers : </th><td><input type="checkbox" name="clear_table_customers" value="kati5"></td></tr>
+				
+				<tr><th>Διαγραφή Πίνακα orders : </th><td><input type="checkbox" name="clear_table_orders" value="kati6"></td></tr>
+				
+				<tr><th>Διαγραφή Πίνακα orders_items : </th><td><input type="checkbox" name="clear_table_order_items" value="kati7"></td></tr-->
+			
+			<?php //---------------------------------------------------------------------------------------------------------------------------?>
+			<input type="button" onclick="SetAllCheckBoxes('myForm', 'myCheckbox', true);" value="I like them all!">
+			&nbsp;&nbsp;
+			<input type="button" onclick="SetAllCheckBoxes('myForm', 'myCheckbox', false);" value="I don't like any of them!">
+			</form>	
+			<?php //---------------------------------------------------------------------------------------------------------------------------?>					
+				<tr>
+					<td><input name="clear_tables_checked" type="submit" id="kati" value="Διαγραφή" /></td>					
+				</tr>				
+					
+				</form>
+			</table>
+			
+			<div id="blue"> <?php if(isset($message)) echo $message; ?> </div>
+			<div id="red_alert">  <?php if(isset($alert1)) echo "Προσοχή : ".$alert1; ?>   </div>
+			<div id="red_alert">  <?php if(isset($alert2)) echo "Προσοχή : ".$alert2; ?>   </div>
+			<div id="red_alert">  <?php if(isset($alert3)) echo "Προσοχή : ".$alert3; ?>   </div>
+			<div id="red_alert">  <?php if(isset($alert4)) echo "Προσοχή : ".$alert4; ?>   </div>
+			<div id="red_alert">  <?php if(isset($alert5)) echo "Προσοχή : ".$alert5; ?>   </div>
+			<div id="red_alert">  <?php if(isset($alert6)) echo "Προσοχή : ".$alert6; ?>   </div>
+			<div id="red_alert">  <?php if(isset($alert7)) echo "Προσοχή : ".$alert6; ?>   </div>
+			
+			
+			
+			
+	
+	<div id="footer">
+		<?php
+			include("footer.php");		
+		?>
+	</div>
+
+</div>
+
+</body>
+</html>
+

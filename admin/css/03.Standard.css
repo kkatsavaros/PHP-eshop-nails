@@ -1,0 +1,134 @@
+@charset "utf-8"
+/* CSS Document */
+
+<style type="text/css">
+
+.malakia{
+
+}
+
+p {
+	color:#000000;
+	font-family:"Times New Roman", Times, serif;
+	font-size:16px;	
+	text-indent:20px;        /* Πόσο μέσα θα ξεκινάει μία παράγραφος */
+	line-height:1.2em;       /* Είναι το διάστυχο μεταξύ των γραμμών */
+	padding: 0px 20px 0px 20px;
+	}
+	
+a{text-decoration:none;}
+a:link,a:visited{color:#696A21;}
+a:hover,a:active{color:#692121;text-decoration:underline overline;}
+
+h1{
+	color:#FFCC00;
+	text-align:center;
+	/*border:1px dashed red;*/
+	}
+	
+h2,h3,h4,h5,h6{
+	text-align:center;
+	color:#0000ff
+	}
+
+#red_alert{
+	color:#Ff0000;
+	font-size:16px;
+	text-align:center;	
+	font-weight:bold;
+	}
+
+#blue{
+	color:#0000FF;
+	text-align:center;	
+	}
+	
+#green{
+	color:#00ff00;
+	text-align:center;
+    font-weight:bold;	
+	}
+	
+#fouxi{
+	color:#FF03CD;
+	text-align:center;
+    font-weight:bold;	
+	}
+	
+p.product_insert{
+	color:#ff0000;
+	font-family:"Times New Roman", Times, serif;
+	font-size:10px;	
+		
+}
+/*----------------------------------------------
+	Για το header.php - header_index.php
+----------------------------------------------*/
+#aboutheader{
+	padding: 10px 0px 10px 0px;
+	text-align:center;
+	color:#000;	
+	}
+	
+/*----------------------------------------------
+			Για το footer.php
+----------------------------------------------*/
+#footer a{
+	color:#FF8000;
+	text-decoration:underline;	 		
+	}
+
+#footer a:hover{
+	color:#ff0000;
+	text-decoration:none;	 		
+	}
+
+p.footereli {
+	font-size:12px !important;
+	padding: 0px 0px 0px 0px;
+	margin: 10px 0px 10px 0px;
+	}
+
+#site_validator{
+	margin:0px 0px 0px 600px;
+	}
+
+/*----------------------------------------------
+			 Site Map
+----------------------------------------------*/
+#sitemap {
+	font-size:16px;
+	font-family:"Courier New", Courier, mono;
+	font-style:italic;	      
+	margin:30px 30px 40px 30px;
+	}
+
+#sitemap a{color:#FF8000;
+	text-decoration:none;
+	}
+
+#sitemap a:hover{color:#ff0000;
+	text-decoration:underline;	
+	}
+
+/*----------------------------------------------
+					 πάνω
+----------------------------------------------*/
+.pano {
+	font-size:16px;
+	font-family:"Courier New", Courier, mono;
+	font-style:italic;
+	/*	margin:30px 30px 40px 30px;*/
+	}
+
+.pano a{
+	color:#FF8000;
+	text-decoration:none;
+	}
+
+.pano a:hover{
+	color:#ff0000;
+	text-decoration:underline;	
+	}
+	
+</style>

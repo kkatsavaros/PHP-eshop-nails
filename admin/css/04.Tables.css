@@ -1,0 +1,551 @@
+@charset "utf-8";
+/* CSS Document */
+
+<style type="text/css">
+
+.malakia{
+	
+}
+
+/*----------------------------------------------
+				Πίνακες
+	Τα Βασικά - Δεν πρέπει να αλλάζουν
+----------------------------------------------*/
+
+
+caption{                        /* Για όλα τα captions, όλων των πινάκων */
+	margin-top:5px;
+	margin-bottom:10px;
+	font-weight:bold;
+	color:#0000FF;
+	font-size:18px;	
+	background-color:#FFFFCC;	
+	}
+	
+tr.hilite{background:#CCC;}     /* <tr class="<?php echo $i%2 ? 'nohilite' : 'hilite'; ?>"> */
+tr.nohilite{background:#edf5ff;}	
+	
+th, td {
+	padding: 0.1em 1em;
+	}
+
+/*----- Για τις κάθετες στήλες -----*/
+col{
+	border-right:1px solid #666;
+	}
+col .abc4{
+	border:none;
+	}	
+
+/**********************************************************************************************
+									για τον Διαχειριστή - Admin.php
+***********************************************************************************************/
+
+/*************** 1 : Πίνακας εμφάνισης των Administrators */
+table.table_admins_show{
+	border-collapse:collapse;   /* Για να μην φαίνεται το εξωτερικό Border του πίνακα που είναι και πολύ παχύ */
+	width:800px;	
+	border:1px solid #666;      /* Μόνο το γύρω γύρω όλου του πίνακα και όχι των κελιών. */
+	text-align:center;	
+	}
+
+table.table_admins_show .main {            /* Η κάτω γραμμή από το μενού */
+	border-bottom:1px solid black; 
+	}
+
+
+/*************** 2 : Πίνακας εισαγωγής Administrator */
+table.table_admin_insert{
+	border-collapse:collapse;   /* Για να μην φαίνεται το εξωτερικό Border του πίνακα που είναι και πολύ παχύ */
+	width:580px;	
+	border:1px solid #666;      /* Μόνο το γύρω γύρω όλου του πίνακα και όχι των κελιών. */
+	text-align:center;
+	background-color:#F0E1FA;
+	}
+
+table.table_admin_insert caption{
+	margin-top:30px;
+	}
+
+
+/**********************************************************************************************
+									για τις Κατηγορίες
+***********************************************************************************************/
+
+/************* 3 : Πίνακας εμφάνισης των Κατηγοριών - Categories_All.php */
+table.table_categories_show{
+	border-collapse:collapse;   /* Για να μην φαίνεται το εξωτερικό Border του πίνακα που είναι και πολύ παχύ */
+	width:800px;
+	text-align:center;	
+	border:1px solid #666;      /* Μόνο το γύρω γύρω όλου του πίνακα και όχι των κελιών. */
+	font-size:12px;
+	}
+
+
+table.table_categories_show caption{  /* Μόνο για το caption αυτού του πίνακα */ 
+	margin-top:30px;
+	}
+
+
+table.table_categories_show .main {            /* Η κάτω γραμμή από το μενού */
+	border-bottom:1px solid black;
+	}
+
+table.table_categories_show tr:hover {
+  /* background-color:#3d80df;
+  color: #fff; */
+	}
+
+
+/************* 4 : Πίνακας Εισαγωγής - Επεξεργασίας - Διαγραφής νέας Κατηγορίας - Categories_Insert.php*/
+table.table_categories_insert{
+	border-collapse:collapse;   /* Για να μην φαίνεται το εξωτερικό Border του πίνακα που είναι και πολύ παχύ */	
+	width:650px;	
+	text-align:center;	
+	background-color:#F0E1FA;
+	border:1px solid #666;      /* Μόνο το γύρω γύρω όλου του πίνακα και όχι των κελιών. */		
+	}
+
+table.table_categories_insert caption{  /* Μόνο για το caption αυτού του πίνακα */ 
+	margin-top:20px;
+	}
+
+table.table_categories_insert th{      /* Αριστερή στοίχιση των td */
+	width:320px;
+	text-align:right;	
+	padding-top:5px;
+	padding-left:10px;
+	}
+
+table.table_categories_insert td{      
+	padding-top:5px;	
+	}
+
+
+/************* 4-b : Πίνακας επεξεργασίας Κατηγορίας - Categories_Edit_update.php */
+table.table_categories_edit{
+	border-collapse:collapse;   /* Για να μην φαίνεται το εξωτερικό Border του πίνακα που είναι και πολύ παχύ */	
+	width:550px;	
+	text-align:center;	
+	background-color:#F0E1FA;
+	border:1px solid #666;      /* Μόνο το γύρω γύρω όλου του πίνακα και όχι των κελιών. */	
+	}
+
+table.table_categories_edit caption{  /* Μόνο για το caption αυτού του πίνακα */ 
+	margin-top:50px;
+	}
+
+table.table_categories_edit th{      /* Αριστερή στοίχιση των td */
+	text-align:right;
+	padding-left:10px;	
+	}
+
+table.table_categories_edit td{      /* Αριστερή στοίχιση των td */
+	text-align:left;
+	padding-left:10px;	
+	}
+
+
+	
+	
+	
+/**********************************************************************************************
+									για τις Υποκατηγορίες
+***********************************************************************************************/	
+	
+/************* 4 : Πίνακας εισαγωγής νέας ΥΠΟΚατηγορίας - Categories_Sub1_Insert.php */
+table.table_subcategories_insert{
+	border-collapse:collapse;   /* Για να μην φαίνεται το εξωτερικό Border του πίνακα που είναι και πολύ παχύ */
+	
+	width:700px;	
+	text-align:center;	
+	background-color:#F0E1FA;
+	border:1px solid #666;      /* Μόνο το γύρω γύρω όλου του πίνακα και όχι των κελιών. */		
+	}
+
+table.table_subcategories_insert caption{  /* Μόνο για το caption αυτού του πίνακα */ 
+	margin-top:20px;
+	}
+
+table.table_subcategories_insert th{      /* Αριστερή στοίχιση των td */
+	width:350px;
+	text-align:right;	
+	padding-top:5px;
+	padding-left:10px;
+	}
+
+table.table_subcategories_insert td{      
+	padding-top:5px;	
+	}
+
+/************* 4 : Πίνακας εισαγωγής νέας ΥΠΟΚατηγορίας - Categories_Sub1_Edit_update.php */
+table.table_subcategories_edit_update{
+	border-collapse:collapse;   /* Για να μην φαίνεται το εξωτερικό Border του πίνακα που είναι και πολύ παχύ */
+	
+	width:500px;	
+	text-align:center;	
+	background-color:#F0E1FA;
+	border:1px solid #666;      /* Μόνο το γύρω γύρω όλου του πίνακα και όχι των κελιών. */		
+	}
+
+table.table_subcategories_edit_update caption{  /* Μόνο για το caption αυτού του πίνακα */ 
+	margin-top:20px;
+	}
+
+table.table_subcategories_edit_update th{      /* Αριστερή στοίχιση των td */
+	width:300px;
+	text-align:right;	
+	padding-top:5px;
+	padding-left:10px;
+	}
+
+table.table_subcategories_edit_update td{      
+	padding-top:5px;	
+	}
+
+	
+
+
+/**********************************************************************************************
+										για τα Προϊόντα
+***********************************************************************************************/
+
+/************* 5 : Πίνακας εμφάνισης όλων των προϊόντων - Products_show.php */
+table.table_products_show{
+	border-collapse:collapse;   /* Για να μην φαίνεται το εξωτερικό Border του πίνακα που είναι και πολύ παχύ */
+	
+	width:1000px;	
+	text-align:left;	
+	border:1px solid #666;      /* Μόνο το γύρω γύρω όλου του πίνακα και όχι των κελιών. */
+}
+
+table.table_products_show tr:hover {
+  /* background-color:#3d80df;
+  color: #fff; */
+ }
+
+ 
+
+/************* 6 : Πίνακας Εισαγωγής νέων προϊόντων - Products_Insert.php */
+table.table_products_insert{
+	border-collapse:collapse;   /* Για να μην φαίνεται το εξωτερικό Border του πίνακα που είναι και πολύ παχύ */
+	/*width:800px;*/
+	/*background-color:#F0E1FA;*/
+	/*background-color:#ff0000;*/
+	/*border:1px solid #666;      /* Μόνο το γύρω γύρω όλου του πίνακα και όχι των κελιών. */		
+	text-align:left;
+	
+	font-size:12px;	
+	}
+
+table.table_products_insert th{
+	text-align:right;
+	/*border-right:3px double #000;*/
+	
+	}
+
+table.table_products_insert td{
+	text-align:left;
+	padding-left:10px;	
+	/*width:100px;*/
+	}
+
+table.table_products_insert tr{
+	/*border-bottom:1px solid #666;*/	
+	}
+
+/************* 7 : Πίνακας Αποτέλεσμα Εισαγωγής νέων προϊόντων - Products_Insert_Result.php */
+table.table_products_insert_result{
+	border-collapse:collapse;   /* Για να μην φαίνεται το εξωτερικό Border του πίνακα που είναι και πολύ παχύ */
+	width:500px;
+	background-color:#F0E1FA;
+	border:1px solid #666;      /* Μόνο το γύρω γύρω όλου του πίνακα και όχι των κελιών. */		
+	
+	color:#0000ff;
+	font-family:"Times New Roman", Times, serif;
+	font-size:14px;	
+	}
+
+table.table_products_insert_result th{
+	text-align:right;
+	border-right:3px double #000;	
+	}
+
+table.table_products_insert_result td{
+	text-align:left;
+	padding-left:10px;	
+	}
+
+table.table_products_insert_result tr{
+	border-bottom:1px solid #666;	
+	}	
+	
+	
+	
+
+/************* 6 : Πίνακας Επεξεργασίας προϊόντων - Products_show_one_Edit.php */
+table.table_Products_show_one_Edit{
+	border-collapse:collapse;   /* Για να μην φαίνεται το εξωτερικό Border του πίνακα που είναι και πολύ παχύ */
+	width:800px;
+	background-color:#F0E1FA;
+	border:1px solid #666;      /* Μόνο το γύρω γύρω όλου του πίνακα και όχι των κελιών. */		
+	}
+
+table.table_Products_show_one_Edit th{
+	text-align:right;
+	border-right:3px double #000;	
+	}
+
+table.table_Products_show_one_Edit td{
+	text-align:left;
+	padding-left:10px;	
+	}
+
+table.table_Products_show_one_Edit tr{
+	border-bottom:1px solid #666;	
+	}	
+	
+	
+	
+	
+/************* 7 : Πίνακας Εύρεσης προϊόντων - ProductsToHTML_queries.php */
+table.table_ProductsToHTML_queries_1o{
+	border-collapse:collapse;   /* Για να μην φαίνεται το εξωτερικό Border του πίνακα που είναι και πολύ παχύ */	
+	width:350px;	
+	text-align:center;	
+	background-color:#F0E1FA;
+	border:1px solid #666;      /* Μόνο το γύρω γύρω όλου του πίνακα και όχι των κελιών. */
+	}
+
+	
+	
+	
+	
+
+/**********************************************************************************************
+										για τις Παραγγελίες
+***********************************************************************************************/
+
+/************* 8 : Πίνακας Παραγγελιών - Orders.php */
+table.table_orders{
+	border-collapse:collapse;   /* Για να μην φαίνεται το εξωτερικό Border του πίνακα που είναι και πολύ παχύ */
+	width:1320px;
+	text-align:center;	
+	border:1px solid #666;      /* Μόνο το γύρω γύρω όλου του πίνακα και όχι των κελιών. */
+	font-size:11px;
+	}
+
+table.table_orders th{
+	border-bottom:1px solid #666;
+	}
+
+table.table_orders tr:hover {
+  background-color:#3d80df;  
+	}
+
+col.table_orders{
+	border-right:1px solid #666;
+}
+	
+
+/************* 8 : Πίνακας Παραγγελιών - Orders.php */
+table.table_orders_items{
+	border-collapse:collapse;   /* Για να μην φαίνεται το εξωτερικό Border του πίνακα που είναι και πολύ παχύ */
+	width:500px;
+	text-align:center;	
+	border:1px solid #666;      /* Μόνο το γύρω γύρω όλου του πίνακα και όχι των κελιών. */
+	font-size:12px;
+	}
+
+table.table_orders_items th{
+	border-bottom:1px solid #666;
+	}
+
+table.table_orders_items tr:hover {
+  background-color:#3d80df;  
+	}
+
+col.table_orders_items{
+	border-right:1px solid #666;
+}	
+	
+	
+	
+
+/************* 9 : Πίνακας ανάμεσα σε ημερομηνίες - Orders.php */
+table.table_between_dates{
+	border-collapse:collapse;   /* Για να μην φαίνεται το εξωτερικό Border του πίνακα που είναι και πολύ παχύ */
+	width:850px;
+	text-align:center;	
+	border:1px solid #666;      /* Μόνο το γύρω γύρω όλου του πίνακα και όχι των κελιών. */
+	background-color:#F0E1FA;
+	margin-bottom:20px;
+	}
+
+
+/**********************************************************************************************
+							για τις Παραγγελίες - Customers_All.php
+***********************************************************************************************/
+/************* 8 : Πίνακας Παραγγελιών - Orders.php */
+table.table_customers{
+	border-collapse:collapse;   /* Για να μην φαίνεται το εξωτερικό Border του πίνακα που είναι και πολύ παχύ */
+	width:1320px;
+	text-align:center;	
+	border:1px solid #666;      /* Μόνο το γύρω γύρω όλου του πίνακα και όχι των κελιών. */
+	font-size:11px;
+	}
+
+table.table_customers th{
+	border-bottom:1px solid #666;
+	}
+
+table.table_customers tr:hover {
+  background-color:#3d80df;  
+	}
+
+col.table_customers{
+	border-right:1px solid #666;
+}
+/************* 8 : Πίνακας Παραγγελιών - Orders.php */
+table.table_customer_All{
+	border-collapse:collapse;   /* Για να μην φαίνεται το εξωτερικό Border του πίνακα που είναι και πολύ παχύ */
+	width:1120px;
+	text-align:center;	
+	border:1px solid #666;      /* Μόνο το γύρω γύρω όλου του πίνακα και όχι των κελιών. */
+	font-size:11px;
+	}
+
+table.table_customer_All th{
+	border-bottom:1px solid #666;
+	}
+
+table.table_customer_All tr:hover {
+  background-color:#3d80df;  
+	}
+
+col.table_customer_All{
+	border-right:1px solid #666;
+}
+	
+	
+	
+/**********************************************************************************************
+							Πίνακας Πληροφοριών Διακομιστή - Server_Info.php
+***********************************************************************************************/
+
+table.table_server_info{
+	border-collapse:collapse;   /* Για να μην φαίνεται το εξωτερικό Border του πίνακα που είναι και πολύ παχύ */
+	
+	width:950px;	
+	text-align:center;	
+	border:1px solid #666;      /* Μόνο το γύρω γύρω όλου του πίνακα και όχι των κελιών. */	
+	}
+
+table.table_server_info caption{  /* Μόνο για το caption αυτού του πίνακα */ 
+	margin-top:10px;
+	}
+
+table.table_server_info td{      /* Αριστερή στοίχιση των td */
+	text-align:left;
+	/*border-bottom:1px dashed #666;*/
+	padding-left:10px;
+	}
+
+table.table_server_info th{      /* Αριστερή στοίχιση των td */
+	text-align:left;
+	padding-left:5px;
+	width:180px;
+	}
+
+
+/**********************************************************************************************
+					Διαγραφή δεδομένων πινάκων - clear_db.php
+***********************************************************************************************/
+/*************clear_db.php */
+table.table_clear_db{
+	border-collapse:collapse;   /* Για να μην φαίνεται το εξωτερικό Border του πίνακα που είναι και πολύ παχύ */	
+	width:400px;	
+	text-align:center;	
+	background-color:#F0E1FA;
+	border:1px solid #666;      /* Μόνο το γύρω γύρω όλου του πίνακα και όχι των κελιών. */		
+	}
+
+table.table_clear_db caption{  /* Μόνο για το caption αυτού του πίνακα */ 
+	margin-top:20px;
+	}
+
+table.table_clear_db th{      /* Αριστερή στοίχιση των td */
+	width:350px;
+	text-align:left;	
+	padding-top:5px;
+	padding-left:10px;
+	}
+
+table.table_clear_db td{   
+	width:50px;   
+	padding-top:5px;	
+	}
+
+/**********************************************************************************************
+	Οι πιο επισκέψιμες σελίδες - most visited pages		- statistics_mvpages.php
+***********************************************************************************************/
+/*************clear_db.php */
+table.table_statistics_show_mvpages{
+	border-collapse:collapse;   /* Για να μην φαίνεται το εξωτερικό Border του πίνακα που είναι και πολύ παχύ */	
+	width:500px;	
+	text-align:center;	
+	background-color:#F0E1FA;
+	border:1px solid #666;      /* Μόνο το γύρω γύρω όλου του πίνακα και όχι των κελιών. */	
+	font-size:11px;	
+	}
+
+table.table_statistics_show_mvpages caption{  /* Μόνο για το caption αυτού του πίνακα */ 
+	margin-top:20px;
+	}
+
+table.table_statistics_show_mvpages th{      /* Αριστερή στοίχιση των td */
+	/*width:350px;*/
+	text-align:center;	
+	padding-top:5px;
+	padding-left:10px;
+	}
+
+table.table_statistics_show_mvpages td{   
+	/*width:50px;*/   
+	padding-top:5px;
+    	
+	}
+
+/**********************************************************************************************
+	             Εύρεση μεταξύ ημερομηνιών - statistics_between_dates.php
+***********************************************************************************************/
+/*************clear_db.php */
+table.table_statistics_show{
+	border-collapse:collapse;   /* Για να μην φαίνεται το εξωτερικό Border του πίνακα που είναι και πολύ παχύ */	
+	width:1100px;	
+	text-align:center;	
+	background-color:#F0E1FA;
+	border:1px solid #666;      /* Μόνο το γύρω γύρω όλου του πίνακα και όχι των κελιών. */	
+	font-size:11px;	
+	}
+
+table.table_statistics_show caption{  /* Μόνο για το caption αυτού του πίνακα */ 
+	margin-top:20px;
+	}
+
+table.table_statistics_show th{      /* Αριστερή στοίχιση των td */
+	/*width:350px;*/
+	text-align:center;	
+	padding-top:5px;
+	padding-left:10px;
+	}
+
+table.table_statistics_show td{   
+	/*width:50px;*/   
+	padding-top:5px;
+	font-size:10px;	
+    	
+	}
+
+
+</style>
