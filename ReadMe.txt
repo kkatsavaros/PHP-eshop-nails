@@ -1,3 +1,6 @@
+PHP-eshops-nails-2013
+
+
 This is a simple full PHP multilanguage eshop. 
 
 It a divided in two separate parts. The first one is the Clients part where the client can buy nail products. The cart uses sessions and after the sale the client receives email with the order.
@@ -7,3 +10,5 @@ The second part is the Admin part where the administrator logs in with his passw
 For this eshop project i use PHP for backend and HTML, CSS, jQuery, Pure Javascript for front end.
 
 That was my wifes eshop for 2013 until 2016.
+
+Katsavaros Konstantinos
